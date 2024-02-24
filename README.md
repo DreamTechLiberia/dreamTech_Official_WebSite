@@ -38,7 +38,7 @@ If you have any questions, suggestions, or just want to say hello, feel free to 
 
 - Email: [contact@dreamtechliberia.com](mailto:contact@dreamtechliberia.com)
 - Website: [www.dreamtechliberia.com](https://www.dreamtechliberia.com)
-- Phone: +1234567890
+- Phone: +231775128898 / +231777850481
 
 ## License
 
