@@ -4,7 +4,7 @@ Welcome to Dream Tech Liberia's repository! We are excited to have you here.
 
 ## About Us
 
-Dream Tech Liberia is a cutting-edge technology company dedicated to providing innovative solutions to our clients. Our team is passionate about leveraging technology to drive positive change in Liberia and beyond.
+Dream Tech Liberia is a cutting-edge technology organization dedicated to providing innovative solutions to our clients. Our team is passionate about leveraging technology to drive positive change in Liberia and beyond.
 
 ## Repository Overview
 
@@ -38,7 +38,7 @@ If you have any questions, suggestions, or just want to say hello, feel free to 
 
 - Email: [contact@dreamtechliberia.com](mailto:contact@dreamtechliberia.com)
 - Website: [www.dreamtechliberia.com](https://www.dreamtechliberia.com)
-- Phone: +231775128898 / +231777850481
+- Phone: +1234567890
 
 ## License
 
