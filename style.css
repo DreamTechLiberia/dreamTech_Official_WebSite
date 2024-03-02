@@ -15,27 +15,30 @@
   --color-tertiary: #3f3d56;
 }
 
+/* Navigation Menu Styling */
 nav {
   display: flex;
   position: fixed;
+  top: 0;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   background: var(--color-black);
   padding: 15px;
+  z-index: 999;
 }
 
-nav .logo span {
+nav .logo img {
   position: relative;
+  width: 70%;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  padding: 10px;
   background: var(--color-primary);
 }
 
-nav .logo span a {
+nav .logo img a {
   color: var(--color-white);
   font-weight: bold;
   text-decoration: none;
@@ -59,4 +62,10 @@ nav .nav-links ul li a {
 
 nav .nav-links ul li a:hover {
   color: var(--color-primary);
+}
+
+@media screen and (max-width: 700) {
+  nav {
+    flex-direction: column;
+  }
 }
