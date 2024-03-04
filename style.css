@@ -2,12 +2,54 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  /* background: var(--page-color); */
+  font-family: "Roboto", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background: black;
+  color: white;
+}
+
+.wrapper {
+  margin-left: 50px;
+}
+
+span {
+  color: red;
+}
+
+.buttons {
+  padding-top: 3pc;
+}
+
+.buttons button {
+  padding: 10px 18px 10px 18px;
+  border-radius: 30px;
+  font-size: 18px;
+  border: none;
+  color: white;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+  opacity: 0.55;
+}
+
+#button1 {
+  background: red;
+}
+
+.buttons #button2 {
+  border: 1px solid red;
+  background: transparent;
+  margin-left: 15px;
 }
 
 /* Global colors */
@@ -15,7 +57,6 @@ html {
   --color-gray: #a8a8a8;
   --color-white: #fff;
   --color-black: #000;
-  --page-color: #010101;
   --color-primary: #a31700;
   --color-secondary: #2f2e41;
   --color-tertiary: #3f3d56;
@@ -29,37 +70,35 @@ nav {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-  /* background: var(--color-tertiary); */
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  padding: 10px 20px;
-  z-index: 999;
+  background: var(--color-black);
+  padding: 15px;
 }
 
-nav .logo img {
+nav .logo span {
   position: relative;
-  width: 70%;
   border-radius: 10px;
   display: flex;
   align-items: center;
+  padding: 10px;
   background: var(--color-primary);
+}
+
+nav .logo span a {
+  color: var(--color-white);
+  font-weight: bold;
+  text-decoration: none;
 }
 
 nav .nav-links ul {
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-}
-
-nav .nav-links ul li {
-  list-style: none;
 }
 
 nav .nav-links ul li a {
   text-decoration: none;
-  color: var(--color-black);
+  color: var(--color-gray);
   font-size: 16px;
   font-weight: 600;
   transition: 0.3s ease;
@@ -71,9 +110,6 @@ nav .nav-links ul li a:hover {
 
 nav .container {
   display: none;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 }
 
 .bar1,
@@ -86,6 +122,7 @@ nav .container {
   margin: 6px 0;
   transition: 0.4s;
 }
+
 .change .bar1 {
   transform: translate(0, 10px) rotate(-45deg);
 }
@@ -98,33 +135,19 @@ nav .container {
   transform: translate(0, -10px) rotate(45deg);
 }
 
-.nav-links ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-/* @media query */
-
-/* This media query is used to change the layout of the navigation menu when the screen size is less than 700 pixels wide.
-The navigation menu will be displayed in a vertical column instead of a horizontal row.
- The media query consists of two parts: the media type (screen) and the media feature (max-width).
- The value of the media feature is 700 pixels, which means that the media query will apply if the screen width is less than 700 pixels.
- The CSS code inside the curly braces represents the styles that will be applied if the media query is matched.
- In this case, the flex-direction property is set to column, which changes the layout from a horizontal row to a vertical column.
- */
-
+/* Media query */
 @media screen and (max-width: 750px) {
   nav .nav-links ul {
     display: block;
     right: 0;
   }
+
   .nav-links li {
     padding: 10px 5px;
     border-bottom: 1px solid #555;
   }
 
   .nav-links {
-    /* background: linear-gradient(to bottom, #201f45, #38a49b); */
     padding: 30px 5px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -161,3 +184,4 @@ The navigation menu will be displayed in a vertical column instead of a horizont
     z-index: 99;
   }
 }
+
