@@ -4,23 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>DTL | Dream Tech Liberia</title>
+    <meta name="description" content="DTL |Dream Tech Liberia" />
+    <meta name="theme-color" content="#a31700" />
+    <link rel="manifest" href="manifest.json" type="application/json" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <title>Home | Dream Tech Liberia</title>
   </head>
 
   <body>
     <nav>
       <div class="logo">
-        <a href="#Self"><img src="/assets/favicon_logo.png"></img></a>
+        <a href="#Self" title="Dream Tech Liberia"
+          ><img src="/assets/favicon_logo.png" alt="Dream Tech Logo"
+        /></a>
       </div>
-      <div class="nav-links">
+      <div class="nav-links" id="link">
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Team</a></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Contact Us</a></li>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
+      <div class="container" onclick="hamMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
     </nav>
+
+    <script src="script.js"></script>
   </body>
 </html>

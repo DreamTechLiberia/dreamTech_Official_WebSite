@@ -3,6 +3,11 @@
   padding: 0;
   margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* background: var(--page-color); */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Global colors */
@@ -10,6 +15,7 @@
   --color-gray: #a8a8a8;
   --color-white: #fff;
   --color-black: #000;
+  --page-color: #010101;
   --color-primary: #a31700;
   --color-secondary: #2f2e41;
   --color-tertiary: #3f3d56;
@@ -24,8 +30,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background: var(--color-black);
-  padding: 15px;
+  /* background: var(--color-tertiary); */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 10px 20px;
   z-index: 999;
 }
 
@@ -38,23 +46,20 @@ nav .logo img {
   background: var(--color-primary);
 }
 
-nav .logo img a {
-  color: var(--color-white);
-  font-weight: bold;
-  text-decoration: none;
-}
-
 nav .nav-links ul {
   display: flex;
-  gap: 20px;
-  justify-content: space-between;
+  gap: 30px;
   align-items: center;
   flex-direction: row;
 }
 
+nav .nav-links ul li {
+  list-style: none;
+}
+
 nav .nav-links ul li a {
   text-decoration: none;
-  color: var(--color-gray);
+  color: var(--color-black);
   font-size: 16px;
   font-weight: 600;
   transition: 0.3s ease;
@@ -64,8 +69,95 @@ nav .nav-links ul li a:hover {
   color: var(--color-primary);
 }
 
-@media screen and (max-width: 700) {
-  nav {
+nav .container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: var(--color-tertiary);
+  border-radius: 10px;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.change .bar1 {
+  transform: translate(0, 10px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -10px) rotate(45deg);
+}
+
+.nav-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* @media query */
+
+/* This media query is used to change the layout of the navigation menu when the screen size is less than 700 pixels wide.
+The navigation menu will be displayed in a vertical column instead of a horizontal row.
+ The media query consists of two parts: the media type (screen) and the media feature (max-width).
+ The value of the media feature is 700 pixels, which means that the media query will apply if the screen width is less than 700 pixels.
+ The CSS code inside the curly braces represents the styles that will be applied if the media query is matched.
+ In this case, the flex-direction property is set to column, which changes the layout from a horizontal row to a vertical column.
+ */
+
+@media screen and (max-width: 750px) {
+  nav .nav-links ul {
+    display: block;
+    right: 0;
+  }
+  .nav-links li {
+    padding: 10px 5px;
+    border-bottom: 1px solid #555;
+  }
+
+  .nav-links {
+    /* background: linear-gradient(to bottom, #201f45, #38a49b); */
+    padding: 30px 5px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    right: 0;
+    position: fixed;
+    height: 100vh;
+    margin-bottom: 10px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    transition: 0.3s ease-in-out;
+  }
+
+  nav .nav-links ul {
+    display: flex;
     flex-direction: column;
+  }
+
+  nav .nav-links ul li a {
+    color: #f5ebeb;
+    font-size: 16px;
+    padding: 10px 0;
+    margin: 50px;
+    font-weight: 700;
+    transition: 0.3s ease;
+  }
+
+  nav .container {
+    display: block;
+    z-index: 99;
   }
 }
