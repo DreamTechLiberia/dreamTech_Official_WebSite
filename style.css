@@ -3,11 +3,14 @@
   padding: 0;
   margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background: var(--page-color);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background: var(--page-color);
 }
 
 /* Global colors */
@@ -173,6 +176,112 @@ span {
 .buttons .button2:hover {
   background: var(--color-primary);
 }
+
+/* Tracy's side */
+.section-cards {
+  background: var(--color-secondary);
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 18px 50px 18px 50px;
+  border-radius: 10px;
+}
+
+#head {
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 15px;
+  font-size: 55px;
+  color: var(--color-gray);
+}
+
+.applications {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  color: var(--color-white);
+}
+
+.apply-containers {
+  background: url(assets/image\ 7.png);
+  background-size: cover;
+  border-radius: 10px;
+}
+
+#register {
+  color: var(--color-primary);
+  font-size: 45px;
+  padding-bottom: 140px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+#red {
+  color: var(--color-primary);
+  padding-bottom: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.time,
+.date,
+.duration {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-white);
+  font-size: 18px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.info-parent {
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.apply-button {
+  padding: 10px 27px 10px 27px;
+  padding-bottom: 30px;
+}
+
+.apply-button button {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 13px;
+  font-size: 17px;
+}
+
+.apply-button button:hover {
+  cursor: pointer;
+  opacity: 0.77;
+}
+/* Tracy */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Media query */
 @media screen and (max-width: 750px) {
